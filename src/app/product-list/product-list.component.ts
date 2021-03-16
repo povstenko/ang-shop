@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-product-list',
@@ -6,37 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent implements OnInit {
-  products = [
-    {
-      id: 1,
-      name: 'article 1',
-      label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      price: 25,
-	  image: "https://source.unsplash.com/collection/190727/1600x900"
-    },
-    {
-      id: 2,
-      name: 'article 2',
-      label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      price: 35,
-	  image: "https://source.unsplash.com/collection/190727/1600x900"
-    },
-    {
-      id: 3,
-      name: "article 3",
-      label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      price: 45,
-	  image: "https://source.unsplash.com/collection/190727/1600x900"
-    },
-	{
-		id: 4,
-		name: "article 4",
-		label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-		price: 30,
-		image: "https://source.unsplash.com/collection/190727/1600x900"
-	}
-  ];
-  constructor() {}
+  products: any = [];
+  constructor(private productService: ProductService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.productService.getProducts().subscribe((prod) => {
+      this.products = prod;
+      console.log(prod);
+    });
+  }
 }

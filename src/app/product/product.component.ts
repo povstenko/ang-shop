@@ -13,4 +13,10 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addProd(product) {
+    // console.log(product);
+    localStorage.setItem(product.id.toString(), JSON.stringify(product));
+    
+  }
+
 }
