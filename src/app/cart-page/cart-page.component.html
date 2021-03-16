@@ -1,1 +1,21 @@
-<p>cart-page works!</p>
+<table class="highlight">
+    <thead>
+      <tr>
+          <th>Name</th>
+          <th>Label</th>
+          <th>Price</th>
+          <th>Image</th>
+          <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let p of cartProds">
+        <td>{{p.name}}</td>
+        <td>{{p.label}}</td>
+        <td>{{p.price}}</td>
+        <td><img src="{{p.image}}" alt="" width="150px"></td>
+        <td><a class="waves-effect waves-light btn red">Remove</a></td>
+      </tr>
+    </tbody>
+  </table>
