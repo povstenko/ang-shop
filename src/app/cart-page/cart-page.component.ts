@@ -14,6 +14,13 @@ export class CartPageComponent implements OnInit {
     this.cartProds = this.allStorage();
     console.log(this.cartProds);
   }
+  delProd(product) {
+    this.cartProds = this.cartProds.filter((p) => {
+      return product.id != p.id
+    })
+
+    localStorage.removeItem(product.id);
+  }
   allStorage() {
     var values = [],
       keys = Object.keys(localStorage),

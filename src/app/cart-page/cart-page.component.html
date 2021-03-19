@@ -15,7 +15,7 @@
         <td>{{p.label}}</td>
         <td>{{p.price}}</td>
         <td><img src="{{p.image}}" alt="" width="150px"></td>
-        <td><a class="waves-effect waves-light btn red">Remove</a></td>
+        <td><a (click)="delProd(p)" class="waves-effect waves-light btn red">Remove</a></td>
       </tr>
     </tbody>
   </table>
