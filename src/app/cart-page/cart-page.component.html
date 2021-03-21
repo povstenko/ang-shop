@@ -1,27 +1,32 @@
 <table class="highlight">
   <thead>
     <tr>
+      <th>Image</th>
       <th>Name</th>
       <th>Label</th>
       <th>Price</th>
-      <th>Image</th>
+      <th>Amount</th>
       <th>Action</th>
     </tr>
   </thead>
 
   <tbody>
     <tr *ngFor="let p of cartProds">
+      <td><img src="{{p.image}}" alt="" width="150px"></td>
       <td>{{p.name}}</td>
       <td>{{p.label}}</td>
       <td>{{p.price}} $</td>
-      <td><img src="{{p.image}}" alt="" width="150px"></td>
-      <td><a (click)="delProd(p)" class="waves-effect waves-light btn red">Remove</a></td>
+      <td>x{{p.amount}}</td>
+      <td>
+        <a (click)="addProd(p)" class="waves-effect waves-light btn green">Add</a>
+        <a (click)="delProd(p)" class="waves-effect waves-light btn red">Remove</a>
+      </td>
     </tr>
   </tbody>
 </table>
 
 <div class="row">
   <div class="col">
-    <h4>total price: {{prod_sum}} $</h4>
+    <h4>Total price: {{prod_sum}} $</h4>
   </div>
 </div>
