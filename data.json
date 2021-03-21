@@ -2,28 +2,28 @@
     "products": [
         {
             "id": 1,
-            "name": "article 1",
+            "name": "car",
             "label": "Lorem ipsum dolor sit amet.",
             "price": 25,
             "image": "https://source.unsplash.com/collection/190727/1600x900"
         },
         {
             "id": 2,
-            "name": "article 2",
+            "name": "phone",
             "label": "product item 2",
             "price": 35,
             "image": "https://source.unsplash.com/collection/190728/1600x900"
         },
         {
             "id": 3,
-            "name": "article 3",
+            "name": "banana",
             "label": "Lorem ipsum dolor sit amet, consect.",
             "price": 45,
             "image": "https://source.unsplash.com/collection/190726/1600x900"
         },
         {
             "id": 10,
-            "name": "article 4",
+            "name": "milk",
             "label": "Lorem ipsum dolor sit amet, prod4",
             "price": 30,
             "image": "https://source.unsplash.com/collection/190725/1600x900"
